@@ -1,0 +1,136 @@
+﻿<!--
+   - Name: pom.xml
+   - Description: Maven setup file.
+   - Author: Raul Peña (raul.pena@gmail.com)
+   -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+
+    <!--
+       - POM setup.
+       -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.educacionit.java.standard.8.class.27993</groupId>
+    <artifactId>integrator</artifactId>
+    <version>1.0.0</version>
+    <name>integrator</name>
+    <packaging>jar</packaging>
+    <description>Java 8 Integrator Project.</description>
+
+    <developers>
+        <developer>
+            <id>raul.g.pena</id>
+            <name>Raul Peña</name>
+            <email>raul.pena@gmail.com.com</email>
+	    </developer>
+    </developers>
+
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>8</java.version>
+        <javafx.version>2.2</javafx.version>
+    </properties>
+
+
+
+    <!--
+       - Dependencies declarations.
+       -->
+    <dependencies>
+
+        <!--
+           - Test dependencies.
+           -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+        <!--
+           - Compile dependencies.
+           -->
+
+        <!-- 
+           - Log4j dependencies.
+           -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--
+           - Apache dependencies.
+           -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--
+           - MYSQL dependencies.
+           -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!--
+           - FX dependencies.
+           -->
+        <dependency>
+            <groupId>jfxrt</groupId>
+            <artifactId>jfxrt</artifactId>
+            <version>2.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/jfxrt/jfxrt/2.0.0/jfxrt-2.0.0.jar</systemPath>
+        </dependency>
+
+
+
+    </dependencies>
+
+
+
+    <!--
+       - Build setup.
+       -->
+    <build>
+        <finalName>integrator</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    
+
+</project>
